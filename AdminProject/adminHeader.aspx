@@ -23,7 +23,6 @@ SmartPhone Compatible web template,  WebDesigns for Nokia, Samsung, LG, SonyEric
 <script src="js/jquery-1.11.1.min.js"></script>
 <script src="js/modernizr.custom.js"></script>
 <!--webfonts-->
-<%--<link href='http://fonts.useso.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>--%>
 <!--//webfonts--> 
 <!--animate-->
 <link href="css/animate.css" rel="stylesheet" type="text/css" media="all">

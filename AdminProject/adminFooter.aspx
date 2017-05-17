@@ -7,22 +7,22 @@
 	<!-- Classie -->
 		<script src="js/classie.js"></script>
 		<script>
-			var menuLeft = document.getElementById( 'cbp-spmenu-s1' ),
-				showLeftPush = document.getElementById( 'showLeftPush' ),
-				body = document.body;
+		    var menuLeft = document.getElementById( 'cbp-spmenu-s1' ),
+		        showLeftPush = document.getElementById( 'showLeftPush' ),
+		        body = document.body;
 				
-			showLeftPush.onclick = function() {
-				classie.toggle( this, 'active' );
-				classie.toggle( body, 'cbp-spmenu-push-toright' );
-				classie.toggle( menuLeft, 'cbp-spmenu-open' );
-				disableOther( 'showLeftPush' );
-			};
+		    showLeftPush.onclick = function() {
+		        classie.toggle( this, 'active' );
+		        classie.toggle( body, 'cbp-spmenu-push-toright' );
+		        classie.toggle( menuLeft, 'cbp-spmenu-open' );
+		        disableOther( 'showLeftPush' );
+		    };
 			
-			function disableOther( button ) {
-				if( button !== 'showLeftPush' ) {
-					classie.toggle( showLeftPush, 'disabled' );
-				}
-			}
+		    function disableOther( button ) {
+		        if( button !== 'showLeftPush' ) {
+		            classie.toggle( showLeftPush, 'disabled' );
+		        }
+		    }
 		</script>
 	<!--scrolling js-->
 	<script src="js/jquery.nicescroll.js"></script>
@@ -30,5 +30,30 @@
 	<!--//scrolling js-->
 	<!-- Bootstrap Core JavaScript -->
    <script src="js/bootstrap.js"> </script>
+    <script>
+            $(document).ready(function () {
+
+                console.log("....11");
+
+            $("#regBtn").on("Click" , function(ev) {
+                ev.preventDefault();
+                var faq = $(":radio[name='FAQ']:checked").val();
+                var countryCode = $(":radio[name='CountryCode']:checked").val();
+                var question = $("#txtarea1").val();
+                var answer = $("#txtarea2").val();
+                console.log("...");
+
+
+            });
+
+
+
+        });
+
+
+
+
+    </script>
+
 </body>
 </html>
