@@ -6,7 +6,8 @@ using AdminProject.Model;
 
 namespace AdminProject.DAO
 {
-    interface FAQDAO
+    // FAQ 인터페이스 입니다.
+    interface IFaq
     {
         void create(FAQ faq);
         FAQ read(int id);

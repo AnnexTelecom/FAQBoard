@@ -13,37 +13,7 @@ namespace AdminProject
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (String.IsNullOrEmpty(Request["question"]))
-            {
-                Response.Write("error");
-                Response.End();
-            }
-            else
-            {
-                registerFAQ();
-
-                Response.Redirect("faqList.aspx");
-
-            }
-
-
 
         }
-
-        private void registerFAQ()
-        {
-            FAQDAO dao = new FAQDAOImpl();
-
-            FAQ vo = new FAQ();
-
-            vo.question = Request["question"];
-            vo.answer = Request["answer"];
-            vo.session = Request["session"];
-            vo.countryCode = Request["CountryCode"];
-            dao.create(vo);
-        }
-
-
-
     }
 }

@@ -38,6 +38,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -104,7 +107,9 @@
     <Content Include="js\underscore-min.js" />
     <Content Include="js\validator.min.js" />
     <Content Include="js\wow.min.js" />
+    <Content Include="Log4Net.xml" />
     <Content Include="login.aspx" />
+    <Content Include="PostFaqRegister.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -122,8 +127,15 @@
     <Compile Include="adminHeader.aspx.designer.cs">
       <DependentUpon>adminHeader.aspx</DependentUpon>
     </Compile>
-    <Compile Include="DAO\FAQDAO.cs" />
-    <Compile Include="DAO\FAQDAOImpl.cs" />
+    <Compile Include="PostFaqRegister.aspx.cs">
+      <DependentUpon>PostFaqRegister.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PostFaqRegister.aspx.designer.cs">
+      <DependentUpon>PostFaqRegister.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Repository\IFaq.cs" />
+    <Compile Include="Repository\ImplFaq.cs" />
     <Compile Include="faqList.aspx.cs">
       <DependentUpon>faqList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -176,6 +188,7 @@
     <Content Include="fonts\FontAwesome.otf" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

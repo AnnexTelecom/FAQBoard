@@ -7,12 +7,11 @@ namespace AdminProject.Model
 {
     public class FAQ
     {
-        public int id { get; set; }
-        public string session { get; set; }
-        public string question { get; set; }
-        public string answer { get; set; }
-        public string countryCode { get; set; }
-        public DateTime regdate { get; set; }
-
+        public int ID { get; set; }
+        public string Session { get; set; }
+        public string Question { get; set; }
+        public string Answer { get; set; }
+        public string CountryCode { get; set; }
+        public DateTime RegDate { get; set; }
     }
 }

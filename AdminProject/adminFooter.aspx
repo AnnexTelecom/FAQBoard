@@ -30,30 +30,23 @@
 	<!--//scrolling js-->
 	<!-- Bootstrap Core JavaScript -->
    <script src="js/bootstrap.js"> </script>
-    <script>
-            $(document).ready(function () {
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function () {
 
-                console.log("....11");
+                console.log("....11111111");
 
-            $("#regBtn").on("Click" , function(ev) {
-                ev.preventDefault();
-                var faq = $(":radio[name='FAQ']:checked").val();
-                var countryCode = $(":radio[name='CountryCode']:checked").val();
-                var question = $("#txtarea1").val();
-                var answer = $("#txtarea2").val();
-                console.log("...");
+                $("#regBtn").on("click", function (ev) {
+                    ev.defaultPrevented;
+                    var faq = $(":radio[name='FAQ']:checked").val();
+                    var countryCode = $(":radio[name='CountryCode']:checked").val();
+                    var question = $("#txtarea1").val();
+                    var answer = $("#txtarea2").val();
+                    console.log("...");
 
-
+                    $("#regForm").attr("action", "../PostFaqRegister.aspx").submit();
+                });
             });
-
-
-
-        });
-
-
-
-
-    </script>
-
+</script>
 </body>
 </html>
